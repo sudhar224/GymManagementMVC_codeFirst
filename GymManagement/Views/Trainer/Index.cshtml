@@ -1,0 +1,74 @@
+﻿@model IEnumerable<GymManagement.Models.Trainer>
+
+@{
+    ViewBag.Title = "Index";
+}
+<div class="container">
+    <div class="row col-6">
+        <h2>Trainer Details</h2>
+
+    </div>
+    <div class="text-end">
+        <a href="@Url.Action("Create","Trainer")" class="btn btn-primary">Create New Trainer</a>
+    </div>
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TrainerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DOB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mobile)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Weight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Height)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TrainerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DOB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mobile)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Weight)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Height)
+        </td>
+        <td>
+            @*@Html.ActionLink("Edit", "Edit", new { id=item.TrainerId })*@ 
+            <a href="@Url.Action("Edit", "Trainer", new { id = item.TrainerId })" class="btn btn-primary mx-2">Edit</a>          
+            <a href="@Url.Action("Details","Trainer",new {id = item.TrainerId})" class="btn btn-warning mx-2">Details</a>
+            <a href="@Url.Action("Delete","Trainer", new {id=item.TrainerId})" class="btn btn-danger" mx-2>Delete</a>
+        </td>
+    </tr>
+}
+
+</table>
