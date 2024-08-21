@@ -6,7 +6,6 @@
 
 <h2>Create</h2>
 
-
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
@@ -26,17 +25,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Gender, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownListFor(
-                    model => model.Gender,
-                    new SelectList(new List<SelectListItem>
-                    {
-                        new SelectListItem { Text = "Select Gender", Value = "" },
-                        new SelectListItem { Text = "Male", Value = "Male" },
-                        new SelectListItem { Text = "Female", Value = "Female" },
-                        new SelectListItem { Text = "Other", Value = "Other" }
-                    }, "Value", "Text"),
-                    new { @class = "form-control" }
-                )
+                @Html.EditorFor(model => model.Gender, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Gender, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -68,7 +57,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.DOJ, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.TextBoxFor(model => model.DOJ, new { @class = "form-control", type = "datetime-local" })
+                @Html.EditorFor(model => model.DOJ, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.DOJ, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -92,7 +81,3 @@
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}

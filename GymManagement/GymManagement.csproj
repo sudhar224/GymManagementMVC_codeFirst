@@ -129,6 +129,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MemberController.cs" />
+    <Compile Include="Controllers\PaymentController.cs" />
     <Compile Include="Controllers\TrainerController.cs" />
     <Compile Include="Data\ApplicationDbContext.cs" />
     <Compile Include="Global.asax.cs">
@@ -142,8 +143,14 @@
     <Compile Include="Migrations\202408200804251_MemberClassCreated.designer.cs">
       <DependentUpon>202408200804251_MemberClassCreated.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202408211128292_PaymentClassAdded.cs" />
+    <Compile Include="Migrations\202408211128292_PaymentClassAdded.designer.cs">
+      <DependentUpon>202408211128292_PaymentClassAdded.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Member.cs" />
+    <Compile Include="Models\MemberPaymentViewModel.cs" />
+    <Compile Include="Models\Payment.cs" />
     <Compile Include="Models\Trainer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -203,11 +210,14 @@
     <Content Include="Views\Trainer\Edit.cshtml" />
     <Content Include="Views\Trainer\Delete.cshtml" />
     <Content Include="Views\Trainer\Details.cshtml" />
-    <Content Include="Views\Member\Create.cshtml" />
     <Content Include="Views\Member\Index.cshtml" />
     <Content Include="Views\Member\Edit.cshtml" />
     <Content Include="Views\Member\Details.cshtml" />
     <Content Include="Views\Member\Delete.cshtml" />
+    <Content Include="Views\Payment\Index.cshtml" />
+    <Content Include="Views\Member\Create.cshtml" />
+    <Content Include="Views\Payment\Create.cshtml" />
+    <Content Include="Views\Payment\PaymentList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -245,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202408200804251_MemberClassCreated.resx">
       <DependentUpon>202408200804251_MemberClassCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202408211128292_PaymentClassAdded.resx">
+      <DependentUpon>202408211128292_PaymentClassAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

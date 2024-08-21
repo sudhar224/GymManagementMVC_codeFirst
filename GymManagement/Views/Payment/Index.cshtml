@@ -1,0 +1,26 @@
+﻿@model IEnumerable<GymManagement.Models.MemberPaymentViewModel>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Member Name</th>
+            <th>Phone</th>
+            <th>Fees</th>
+            <th>Amount Paid</th>
+            <th>Balance Amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.MemberName</td>
+                <td>@item.Phone</td>
+                <td>@item.Fees</td>
+                <td>@item.AmountPaid</td>
+                <td>@item.BalanceAmount</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

@@ -1,29 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
 namespace GymManagement.Models
 {
-	public class Payment
+	public class MemberPaymentViewModel
 	{
-		[Key]
-		public int Id { get; set; }
-
 		public int MemberId { get; set; }
-
-		[ForeignKey("MemberId")]
-		public virtual Member Member { get; set; }
-
-		[Required]
+		public string MemberName { get; set; }
+		public string Phone { get; set; }
+		public int PaymentId { get; set; }
 		public int Fees { get; set; }
-
-		[Required]
 		public string AmountPaid { get; set; }
-
-		[Required]
 		public string BalanceAmount { get; set; }
 	}
 }

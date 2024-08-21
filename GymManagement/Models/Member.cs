@@ -24,6 +24,7 @@ namespace GymManagement.Models
 		public DateTime DOJ { get; set; }
 		[Required]
 		public string WorkoutTime { get; set; }
+		public virtual ICollection<Payment> Payments { get; set; }
 
 	}
 }

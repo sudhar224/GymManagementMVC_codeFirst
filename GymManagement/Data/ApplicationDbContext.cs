@@ -16,6 +16,8 @@ namespace GymManagement.Data
 		public DbSet<Trainer> tbl_trainers { get; set; }
 		public DbSet<Member> tbl_members { get; set; }
 
+		public DbSet<Payment> tbl_payment { get; set; }
+
 		protected override void OnModelCreating(DbModelBuilder modelBuilder)
 		{
 			base.OnModelCreating(modelBuilder);
