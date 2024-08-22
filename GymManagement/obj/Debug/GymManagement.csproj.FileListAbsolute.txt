@@ -85,3 +85,6 @@ D:\project folder\GymManagementProject_2\GymManagement\obj\Debug\GymManagement.M
 D:\project folder\GymManagementProject_2\GymManagement\obj\Debug\GymManagement.csproj.GenerateResource.cache
 D:\project folder\GymManagementProject_2\GymManagement\obj\Debug\GymManagement.Migrations.MemberClassCreated.resources
 D:\project folder\GymManagementProject_2\GymManagement\obj\Debug\GymManagement.Migrations.PaymentClassAdded.resources
+D:\project folder\GymManagementProject_2\GymManagement\obj\Debug\GymManagement.Migrations.monthfieldAddedInPayment.resources
+D:\project folder\GymManagementProject_2\GymManagement\obj\Debug\GymManagement.Migrations.AdminModelAdded.resources
+D:\project folder\GymManagementProject_2\GymManagement\obj\Debug\GymManagement.Migrations.ForeignKey.resources

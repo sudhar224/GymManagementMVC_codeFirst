@@ -21,6 +21,9 @@ namespace GymManagement.Models
 		public int Fees { get; set; }
 
 		[Required]
+		public string Month { get; set; }
+
+		[Required]
 		public string AmountPaid { get; set; }
 
 		[Required]

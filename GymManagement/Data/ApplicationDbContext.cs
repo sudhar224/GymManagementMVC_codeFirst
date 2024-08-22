@@ -18,6 +18,8 @@ namespace GymManagement.Data
 
 		public DbSet<Payment> tbl_payment { get; set; }
 
+		public DbSet<Admin> admins { get; set; }
+
 		protected override void OnModelCreating(DbModelBuilder modelBuilder)
 		{
 			base.OnModelCreating(modelBuilder);

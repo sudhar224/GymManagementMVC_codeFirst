@@ -24,5 +24,7 @@ namespace GymManagement.Models
 		public string Weight { get; set;}
 		[Required]
 		public string Height { get; set;}
+
+	 
 	}
 }
